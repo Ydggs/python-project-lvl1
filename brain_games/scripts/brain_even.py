@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from random import randint
-import prompt
 from ..cli import welcome_user
 
 
