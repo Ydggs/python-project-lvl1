@@ -5,11 +5,10 @@ from ..cli import welcome_user
 
 
 def main():
-    print(f'Welcome to the Brain Games!')
     name = welcome_user()
-    print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
+    print(f'Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
-    while count < 3:
+    while count != 3:
         random_number = randint(1, 100)
         print(f'Question: {random_number}')
         user_answer = prompt.string('Your answer: ')
