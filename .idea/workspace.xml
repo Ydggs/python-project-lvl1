@@ -38,6 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -50,7 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655139541430</updated>
       <workItem from="1655139543778" duration="2543000" />
-      <workItem from="1655145026766" duration="3822000" />
+      <workItem from="1655145026766" duration="4250000" />
+      <workItem from="1655155752441" duration="2548000" />
     </task>
     <servers />
   </component>
@@ -70,9 +72,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="494" y="198" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655153230742">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="494" y="198" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1655153230742" />
     <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1655141494327">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1655141494327" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1655157559538">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1655157559538" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1655157916314">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1655157916314" />
   </component>
 </project>
