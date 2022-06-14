@@ -2,7 +2,9 @@ package-build: build publish
 
 brain-games: ; poetry run brain-games # запуск проекта
 
-brain-even: ; poetry run brain-even # запуск игры
+brain-even: ; poetry run brain-even # запуск игры "Четность"
+
+brain-calc: ; poetry run brain-calc # запуск игры "Калькулятор"
 
 install: ; poetry install # установка новых зависимостей
 
