@@ -2,6 +2,8 @@ package-build: build publish
 
 brain-games: ; poetry run brain-games # запуск проекта
 
+brain-even: ; poetry run brain-even # запуск игры
+
 install: ; poetry install # установка новых зависимостей
 
 build: ; poetry build # сборка билда
