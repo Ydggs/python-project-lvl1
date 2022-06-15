@@ -9,21 +9,24 @@ def calc():
 
     print('What is the result of the expression?')
 
-    while index != 3:
+    while index < 3:
         first_number = random.randint(1, 100)
         second_number = random.randint(1, 100)
         random_symbols = random.choice(['+', '/', '*', '-'])
+        numbers_sum = round(eval(
+            f'{first_number}{random_symbols}{second_number}'), 1)
+
         print(f'Question: {first_number} {random_symbols} {second_number}')
-        numbers_sum = eval(f'{first_number}{random_symbols}{second_number}')
-        answer_user = prompt.integer('You answer: ')
+
+        answer_user = prompt.real('You answer: ')
         if numbers_sum == answer_user:
             print('Correct!')
             index += 1
             continue
-        print(f"'{answer_user}' is wrong answer ;(."
-              f"Correct answer was '{numbers_sum}'"
-              f"Let's try again, {name}")
-        break
+
+        return print(f"'{answer_user}' is wrong answer ;(."
+                     f"Correct answer was '{numbers_sum}'"
+                     f"Let's try again, {name}")
 
     if index == 3:
         print(f'Congratulations, {name}!')

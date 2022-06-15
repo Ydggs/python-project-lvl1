@@ -9,7 +9,7 @@ def gcd():
 
     print('Find the greatest common divisor of given numbers.')
 
-    while index < 3:
+    while index <= 3:
         first_num = random.randint(0, 100)
         second_num = random.randint(0, 100)
         greatest_num = max(first_num, second_num)
