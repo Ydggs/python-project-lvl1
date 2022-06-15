@@ -4,6 +4,7 @@ import random
 
 
 def calc():
+
     name = welcome_user()
     index = 0
 

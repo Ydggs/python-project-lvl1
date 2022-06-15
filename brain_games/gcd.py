@@ -4,6 +4,7 @@ import random
 
 
 def gcd():
+
     name = welcome_user()
     index = 0
 
