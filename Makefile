@@ -8,6 +8,8 @@ brain-calc: ; poetry run brain-calc # запуск игры "Калькулят�
 
 brain-gcd: ; poetry run brain-gcd # запуск игры "Наибольший общий делитель"
 
+brain-progression: ; poetry run  brain-progression # запуск игры "Арефмитическая прогрессия"
+
 install: ; poetry install # установка новых зависимостей
 
 build: ; poetry build # сборка билда
