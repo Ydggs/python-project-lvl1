@@ -19,15 +19,14 @@ def calc():
 
         print(f'Question: {first_number} {random_symbols} {second_number}')
 
-        answer_user = prompt.real('You answer: ')
-        if numbers_sum == answer_user:
+        user_answer = prompt.real('You answer: ')
+        if numbers_sum == user_answer:
             print('Correct!')
             index += 1
             continue
 
-        return print(f"'{answer_user}' is wrong answer ;(."
+        return print(f"'{user_answer}' is wrong answer ;(."
                      f"Correct answer was '{numbers_sum}'"
-                     f"Let's try again, {name}")
+                     f"\nLet's try again, {name}")
 
-    if index == 3:
-        print(f'Congratulations, {name}!')
+    return print(f'Congratulations, {name}!')
