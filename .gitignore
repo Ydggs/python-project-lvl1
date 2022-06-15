@@ -4,7 +4,9 @@ dist
 dist/
 .idea
 brain_games/scripts/__pycache__
-brain_games/__pycache__
+brain_games/__pycache__/
+brain_games/scripts/__pycache__/*.pyc
+brain_games/__pycache__/*.pyc
 *.pyc
 *.log
 *.xml
