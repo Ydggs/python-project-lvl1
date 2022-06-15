@@ -6,6 +6,8 @@ brain-even: ; poetry run brain-even # запуск игры "Четность"
 
 brain-calc: ; poetry run brain-calc # запуск игры "Калькулятор"
 
+brain-gcd: ; poetry run brain-gcd # запуск игры "Наибольший общий делитель"
+
 install: ; poetry install # установка новых зависимостей
 
 build: ; poetry build # сборка билда

@@ -3,6 +3,8 @@
 dist
 dist/
 .idea
+brain_games/scripts/__pycache__
+brain_games/__pycache__
 *.pyc
 *.log
 *.xml
