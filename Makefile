@@ -10,6 +10,8 @@ brain-gcd: ; poetry run brain-gcd # запуск игры "Наибольший 
 
 brain-progression: ; poetry run  brain-progression # запуск игры "Арефмитическая прогрессия"
 
+brain-prime: ; poetry run brain-prime # запуск игры "Простое число"
+
 install: ; poetry install # установка новых зависимостей
 
 build: ; poetry build # сборка билда
