@@ -29,8 +29,8 @@ def even():
             continue
 
         else:
-            return print(f"'{user_answer}' is wrong answer ;(."
-                         f"Correct answer was '{true_answer} '"
-                         f"\nLet's try again, {name}")
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f"Correct answer was '{true_answer} '")
+            return print(f"Let's try again, {name}")
 
     return print(f'Congratulations, {name}!')

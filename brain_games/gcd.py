@@ -26,8 +26,8 @@ def gcd():
                 break
             elif (first_num % num == 0) and (second_num % num == 0)\
                     and (num != user_answer):
-                return print(f"'{user_answer}' is wrong answer ;(."
-                             f"Correct answer was '{num} '"
-                             f"\nLet's try again, {name}")
+                print(f"'{user_answer}' is wrong answer ;(."
+                      f"Correct answer was '{num} '")
+                return print(f"Let's try again, {name}")
 
     return print(f'Congratulations, {name}!')
