@@ -6,10 +6,9 @@ import prompt
 def prime(name):
     random_number = random.randint(2, 100)
     true_answer = ''
+    first_prime_number = 2
 
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-
-    for num in range(2, random_number + 1):
+    for num in range(first_prime_number, random_number + 1):
         if random_number % num == 0 and random_number != num:
             true_answer = 'no'
         else:
