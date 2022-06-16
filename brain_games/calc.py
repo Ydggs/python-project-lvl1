@@ -27,6 +27,6 @@ def calc():
 
         print(f"'{user_answer}' is wrong answer ;(."
               f"Correct answer was '{numbers_sum} '")
-        return print(f"Let's try again, {name}")
+        return print(f"Let's try again, {name}!")
 
     return print(f'Congratulations, {name}!')
