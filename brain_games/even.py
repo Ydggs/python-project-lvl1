@@ -1,36 +1,34 @@
 from random import randint
 import prompt
-from .cli import welcome_user
 
 
-def even():
+def is_even(num):
+    return True if num % 2 == 0 else False
 
-    name = welcome_user()
-    count = 0
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def correct_answer(num):
+    return 'yes' if is_even(num) else 'no'
 
-    while count < 3:
 
-        random_number = randint(1, 100)
-        print(f'Question: {random_number}')
-        user_answer = prompt.string('Your answer: ')
+def is_answer(first_answer, second_answer):
+    return True if first_answer == second_answer else False
 
-        if random_number % 2 == 0:
-            true_answer = 'yes'
-        else:
-            true_answer = 'no'
 
-        if (random_number % 2 == 0 and user_answer == true_answer) \
-                or (random_number % 2 != 0 and user_answer == true_answer):
+def even(name):
+    random_number = randint(1, 100)
+    print(f'Question: {random_number}')
+    user_answer = prompt.string('Your answer: ')
 
-            print('Correct!')
-            count += 1
-            continue
+    true_answer = correct_answer(random_number)
 
-        else:
-            print(f"'{user_answer}' is wrong answer ;(."
-                  f"Correct answer was '{true_answer} '")
-            return print(f"Let's try again, {name}!")
+    check_answer = is_answer(user_answer, true_answer)
 
-    return print(f'Congratulations, {name}!')
+    if check_answer:
+        print('Correct!')
+        return True
+
+    else:
+        print(f"'{user_answer}' is wrong answer ;(."
+              f"Correct answer was '{true_answer} '")
+        print(f"Let's try again, {name}!")
+        return False
