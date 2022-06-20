@@ -21,3 +21,28 @@ def start_game(func, text, count_game):
 
 def is_true(text):
     return True if text else False
+
+
+def is_answer(first_answer, second_answer):
+    return True if first_answer == second_answer else False
+
+
+def is_even(num, divider=2):
+    return True if num % divider == 0 else False
+
+
+def correct_answer(num=2):
+    return 'yes' if is_even(num) else 'no'
+
+
+def is_prime(value):
+    list_pride = [2, 3, 5, 7]
+    if value in list_pride:
+        return 'yes'
+    else:
+        first_divider = 2
+        last_divider = 10
+        list_pride = [num for num in range(first_divider, last_divider)
+                        \
+                      if is_even(value, num)]
+        return 'yes' if len(list_pride) < 1 else 'no'

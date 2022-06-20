@@ -1,17 +1,6 @@
 from random import randint
+from .cli import correct_answer, is_answer
 import prompt
-
-
-def is_even(num):
-    return True if num % 2 == 0 else False
-
-
-def correct_answer(num):
-    return 'yes' if is_even(num) else 'no'
-
-
-def is_answer(first_answer, second_answer):
-    return True if first_answer == second_answer else False
 
 
 def even(name):
