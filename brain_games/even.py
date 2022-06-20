@@ -1,6 +1,12 @@
 from random import randint
-from .cli import correct_answer, is_answer
+from .cli import correct_answer, is_answer, start_game, welcome_user
 import prompt
+
+
+def start_even():
+    name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    start_game(even, name, 2)
 
 
 def even(name):

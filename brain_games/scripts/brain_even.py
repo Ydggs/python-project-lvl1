@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-from ..cli import welcome_user, start_game
-from ..even import even
+from ..even import start_even
 
 
 def main():
-    name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    start_game(even, name, 2)
+    start_even()
 
 
 if __name__ == '__main__':

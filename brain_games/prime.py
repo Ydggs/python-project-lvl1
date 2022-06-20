@@ -1,6 +1,12 @@
-from .cli import is_answer, is_prime
+from .cli import is_answer, is_prime, start_game, welcome_user
 import random
 import prompt
+
+
+def start_prime():
+    name = welcome_user()
+    print('Answer "yes" if given number is prime. otherwise answer "no".')
+    start_game(prime, name, 2)
 
 
 def prime(name):
