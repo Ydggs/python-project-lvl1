@@ -54,9 +54,11 @@ def get_progression():
     random_application = random.randint(1, 5)
     first_meaning = random.randint(0, 20)
     list_progression = []
+    acc = first_meaning
 
     for item in range(0, random_progressive_size):
-        list_progression.append(first_meaning + random_application * item)
+        acc += random_application
+        list_progression.append(acc)
 
     return list_progression
 
