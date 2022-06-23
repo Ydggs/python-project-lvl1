@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from ..calc import calc
+from ..calc import start_calc
 
 
 def main():
-    calc()
+    start_calc()
 
 
 if __name__ == '__main__':

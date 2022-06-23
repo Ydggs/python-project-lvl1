@@ -1,44 +1,34 @@
-from .cli import welcome_user
+from .cli import is_answer, get_progression, arr_to_string, \
+    change_value, start_game, welcome_user
 import random
 import prompt
 
 
-def progression():
-
+def start_progression():
     name = welcome_user()
-    index = 0
-
     print('What number is missing in the progression?')
+    start_game(progression, name, 2)
 
-    while index < 3:
-        random_progressive_size = random.randint(5, 10)
-        random_num = random.randint(1, random_progressive_size)
-        random_application = random.randint(1, 5)
-        first_meaning = random.randint(0, 20)
-        progressive_list = ''
-        acc = first_meaning
-        true_answer = 0
 
-        for num in range(0, random_progressive_size + 1):
-            if num == random_num:
-                true_answer = acc
-                acc += random_application
-                progressive_list += '.. '
-                continue
+def progression(name):
+    list_progression = get_progression()
 
-            progressive_list += f'{acc} '
-            acc += random_application
+    random_num = random.randint(0, len(list_progression))
 
-        print(f'Question: {progressive_list}')
+    list_progression, true_answer = \
+        change_value(list_progression, '..', random_num)
 
-        user_answer = prompt.integer('You answer: ')
+    list_progression = arr_to_string(list_progression)
 
-        if true_answer == user_answer:
-            print('Correct!')
-            index += 1
-        else:
-            print(f"'{user_answer}' is wrong answer ;(."
-                  f"Correct answer was '{true_answer} '")
-            return print(f"Let's try again, {name}!")
+    print(f'Question: {list_progression}')
 
-    return print(f'Congratulations, {name}!')
+    user_answer = prompt.integer('You answer: ')
+
+    if is_answer(true_answer, user_answer):
+        print('Correct!')
+        return True
+    else:
+        print(f"'{user_answer}' is wrong answer ;(."
+              f"Correct answer was '{true_answer} '")
+        print(f"Let's try again, {name}!")
+        return False

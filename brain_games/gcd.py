@@ -1,33 +1,34 @@
-from .cli import welcome_user
+from .cli import welcome_user, start_game, is_answer
 import prompt
 import random
 
 
-def gcd():
-
+def start_gcd():
     name = welcome_user()
-    index = 0
+    start_game(gcd, name, 2)
 
-    print('Find the greatest common divisor of given numbers.')
 
-    while index <= 3:
-        first_num = random.randint(0, 100)
-        second_num = random.randint(0, 100)
-        greatest_num = max(first_num, second_num)
+def gcd(name):
+    first_num = random.randint(1, 100)
+    second_num = random.randint(1, 100)
 
-        print(f'Question: {first_num} {second_num}')
-        user_answer = int(prompt.integer('You answer: '))
+    print(f'Question: {first_num} {second_num}')
 
-        for num in range(greatest_num, 0, -1):
-            if (first_num % num == 0) and (second_num % num == 0)\
-                    and (num == user_answer):
-                index += 1
-                print('Correct!')
-                break
-            elif (first_num % num == 0) and (second_num % num == 0)\
-                    and (num != user_answer):
-                print(f"'{user_answer}' is wrong answer ;(."
-                      f"Correct answer was '{num} '")
-                return print(f"Let's try again, {name}!")
+    while first_num != second_num:
+        if first_num > second_num:
+            first_num -= second_num
+        else:
+            second_num -= first_num
 
-    return print(f'Congratulations, {name}!')
+    true_answer = first_num
+
+    user_answer = int(prompt.integer('You answer: '))
+
+    if is_answer(user_answer, true_answer):
+        print('Correct!')
+        return True
+    else:
+        print(f"'{user_answer}' is wrong answer ;(."
+              f"Correct answer was '{true_answer} '")
+        print(f"Let's try again, {name}!")
+        return False

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from ..gcd import gcd
+from ..gcd import start_gcd
 
 
 def main():
-    gcd()
+    start_gcd()
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import prompt
+import random
 
 
 def welcome_user():
@@ -46,3 +47,35 @@ def is_prime(value):
                         \
                       if is_even(value, num)]
         return 'yes' if len(list_pride) < 1 else 'no'
+
+
+def get_progression():
+    random_progressive_size = random.randint(5, 10)
+    random_application = random.randint(1, 5)
+    first_meaning = random.randint(0, 20)
+    list_progression = []
+
+    for item in range(0, random_progressive_size):
+        list_progression.append(first_meaning + random_application * item)
+
+    return list_progression
+
+
+def change_value(arr, value, index):
+    changed_value = 0
+    new_arr = []
+    for num in range(0, len(arr)):
+        if index == num:
+            changed_value = arr[index]
+            new_arr.append(value)
+            continue
+        new_arr.append(arr[num])
+
+    return new_arr, changed_value
+
+
+def arr_to_string(arr):
+    string = ''
+    for value in range(0, len(arr)):
+        string += f'{arr[value]} '
+    return string

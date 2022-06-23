@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from ..progression import progression
+from ..progression import start_progression
 
 
 def main():
-    progression()
+    start_progression()
 
 
 if __name__ == '__main__':

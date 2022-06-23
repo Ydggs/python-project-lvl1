@@ -1,32 +1,30 @@
 import prompt
-from .cli import welcome_user
+from .cli import welcome_user, start_game, is_answer
 import random
 
 
-def calc():
-
+def start_calc():
     name = welcome_user()
-    index = 0
-
     print('What is the result of the expression?')
+    start_game(calc, name, 2)
 
-    while index < 3:
-        first_number = random.randint(1, 100)
-        second_number = random.randint(1, 100)
-        random_symbols = random.choice(['+', '/', '*', '-'])
-        numbers_sum = round(eval(
-            f'{first_number}{random_symbols}{second_number}'), 1)
 
-        print(f'Question: {first_number} {random_symbols} {second_number}')
+def calc(name):
+    first_number = random.randint(1, 100)
+    second_number = random.randint(1, 100)
+    random_symbols = random.choice(['+', '*', '-'])
+    true_answer = eval(
+        f'{first_number}{random_symbols}{second_number}')
 
-        user_answer = prompt.real('You answer: ')
-        if numbers_sum == user_answer:
-            print('Correct!')
-            index += 1
-            continue
+    print(f'Question: {first_number} {random_symbols} {second_number}')
 
+    user_answer = prompt.real('You answer: ')
+
+    if is_answer(true_answer, user_answer):
+        print('Correct!')
+        return True
+    else:
         print(f"'{user_answer}' is wrong answer ;(."
-              f"Correct answer was '{numbers_sum} '")
-        return print(f"Let's try again, {name}!")
-
-    return print(f'Congratulations, {name}!')
+              f"Correct answer was '{true_answer} '")
+        print(f"Let's try again, {name}!")
+        return False
