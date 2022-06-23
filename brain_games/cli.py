@@ -11,7 +11,7 @@ def welcome_user():
 
 def start_game(func, text, count_game):
     back_func = func(text)
-    if count_game == 0:
+    if count_game == 0 and is_true(back_func):
         print(f'Congratulations, {text}!')
         return
     elif is_true(back_func):

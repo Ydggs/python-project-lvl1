@@ -13,7 +13,7 @@ def start_progression():
 def progression(name):
     list_progression = get_progression()
 
-    random_num = random.randint(0, len(list_progression))
+    random_num = random.randint(0, len(list_progression) - 1)
 
     list_progression, true_answer = \
         change_value(list_progression, '..', random_num)
